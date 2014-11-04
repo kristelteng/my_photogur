@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   get 'pictures' => 'pictures#index'
+
+  get 'pictures/' => 'pictures#picture0'
+  get 'pictures/:id' => 'pictures#show', as: 'picture'
+  
+
+
   
 
 

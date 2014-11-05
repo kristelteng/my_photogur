@@ -28,7 +28,7 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
 
     if @picture.update_attributes(picture_params)
-      redirect_to '/pictures/#{@picture.id}'
+      redirect_to "/pictures/#{@picture.id}"
     else
       render :edit
     

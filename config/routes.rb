@@ -1,18 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'pictures' => 'pictures#index'
-
-  post 'pictures' => 'pictures#create'
-  get 'pictures/new' => 'pictures#new'
-
-  get 'pictures/:id' => 'pictures#show'
-  get 'pictures/:id/edit' => 'pictures#edit', as: "edit_picture"
-  patch 'picture/:id' => 'pictures#update'
-
-  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
   root 'pictures#index'
+  resources :pictures
+  
 end
-
   
 
 

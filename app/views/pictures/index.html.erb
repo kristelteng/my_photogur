@@ -14,3 +14,10 @@
     <% end %>
   </ul>
 
+<h1>Old pictures</h1>
+<p>Count: <%= @old_pictures.count %></p>
+  <ul>
+    <% @old_pictures.each do |picture| %>
+      <li><%= picture.title %></li>
+    <% end %>
+  </ul>

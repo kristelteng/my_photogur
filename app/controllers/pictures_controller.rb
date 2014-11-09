@@ -1,10 +1,7 @@
 class PicturesController < ApplicationController  
   def index
-    if params[:created_before]
-    @pictures = Picture.created_before(params[:created_before])
-    else
+    @old_pictures = Picture.created_before(0.day.ago)
     @most_recent_pictures = Picture.most_recent_five
-    end
   end
 
   def show
